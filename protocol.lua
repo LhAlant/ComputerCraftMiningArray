@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-field, lowercase-global
 constants = require("constants")
 
 --Gives the slaves an id
@@ -90,11 +91,11 @@ function requestCoordinatesFromSlave(modem, id)
         error("Got '"..message.."' expected '"..expectedMessage.."', shutting down")
     end
 
-    return unformatPositionTable(string.sub(message, #expectedMessage + 1, -1))
+    return unformatVector3D(string.sub(message, #expectedMessage + 1, -1))
 end
 
 function tellCoordinatesToMaster(modem, currentPos)
-    modem.transmit(MOSI_CHANNEL, MOSI_CHANNEL, ""..MISO_PREFIX..MOSI_RETURN_COORDS.." "..formatPositionTable(currentPos))
+    modem.transmit(MOSI_CHANNEL, MOSI_CHANNEL, ""..MISO_PREFIX..MOSI_RETURN_COORDS.." "..tostring(currentPos))
 end
 
 --Master tells the slave to go to a specific coordinate relative to where they started
