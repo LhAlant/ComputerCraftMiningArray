@@ -1,0 +1,8 @@
+v0.0.3
+master.lua      uRNHNpWV
+slave.lua       GWY7p6H6
+utils.lua       MiA6apfV
+protocol.lua    HciQhcc5
+constants.lua   Y3Qy23vH
+mastersetup.lua VbNR2EP7
+slavesetup.lua  3FHTf4t5

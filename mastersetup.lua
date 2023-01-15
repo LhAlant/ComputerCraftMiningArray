@@ -1,0 +1,5 @@
+shell.execute("rm", "*")
+shell.execute("pastebin", "get", "uRNHNpWV", "startup.lua")
+shell.execute("pastebin", "get", "MiA6apfV", "utils.lua")
+shell.execute("pastebin", "get", "HciQhcc5", "protocol.lua")
+shell.execute("pastebin", "get", "Y3Qy23vH", "constants.lua")
