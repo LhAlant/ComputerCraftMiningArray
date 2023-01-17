@@ -35,7 +35,17 @@ end
 
 --Utility to wrap the modem
 function wrapModem()
-    return peripheral.wrap("left")
+    wrappedModem = peripheral.wrap("left")
+    if wrappedModem then 
+	return wrappedModem 
+    end
+
+    wrappedModem = peripheral.wrap("right")
+    if wrappedModem then
+	return wrappedModem
+    end
+
+    error("No modem found !")
 end
 
 --Will dig down until the block is not there
