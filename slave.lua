@@ -123,7 +123,7 @@ function disassembleArray()
     safeMove(relativeXId) --All the turtles will mine each others, there will be one remaining on each row
     dumpInventoryIntoReturnEnderchest(1) --Returns all turtles in the storage
 
-    safeMoveDown((relativeYid) * 3)
+    safeMoveDown((relativeYId) * 3)
 
     safeMoveUp(1)
     dumpInventoryIntoReturnEnderchest(1)
