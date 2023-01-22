@@ -1,4 +1,3 @@
-
 constants = require("constants")
 
 --Gives the slaves an id

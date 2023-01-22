@@ -72,8 +72,8 @@ end
 --Will dig the block in front, bellow and under itself
 function safeDigLoop()
     safeDigUp()
-    safeDig()
     safeDigDown()
+    safeMove(1)
 end
 
 --Will dig left until the block is not there

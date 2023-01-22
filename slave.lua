@@ -54,6 +54,7 @@ function doSetup()
 end
 
 function startMiningLoop()
+    print("starting to mine")
     while true do
         for i = turtle.getFuelLevel(), maxFuelLevel, -1 do
             safeDigLoop()
@@ -91,7 +92,7 @@ function refuelWhileMining()
 end
 
 function checkForFullInventory()
-    if not turtle.getItemCount(16) then
+    if turtle.getItemCount(16) == 0 then
         return
     end
 
@@ -110,11 +111,15 @@ function dumpInventoryIntoReturnEnderchest(startingSlot)
 end
 
 function disassembleArray()
+    print("disassemble array sequence started")
     relativeXId = (id - 1) % 16 --The position of the turtle on it's row
     relativeYId = math.floor((id - 1) / 16) --The position of the turtle on it's column
+    print("Relative coordinates aquired X: "..relativeXId.." Y: "..relativeYId)
     dumpInventoryIntoReturnEnderchest(1)
+    print("turtle is rotating")
     rotation = rotateTo(rotation, 3)
     if relativeXId ~= 0 then
+        print("I'll mine what's in front of me")
         safeMove(relativeXId - 1) --All the turtles will mine each others
         return
     end
@@ -154,6 +159,8 @@ while true do
     elseif command == MOSI_GOTO_Z then
         rotation = moveTo(currentPos, {x = currentPos.x, y = currentPos.y, z = tonumber(data[2])}, rotation)
         currentPos.z = tonumber(data[2])
+    elseif command == MISO_RETURN_COORDS and tonumber(data[2]) == id then
+        tellCoordinatesToMaster(modem, currentPos)
     elseif command == MOSI_DISASSEMBLE_ARRAY then
         disassembleArray()
     end

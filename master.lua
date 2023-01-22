@@ -47,7 +47,7 @@ function placeTurtles()
 
         listenSlaveSetupDone(i) --waits for the turtle to be done picking up items
         if i % 16 == 1 then
-            sleep(5) --Give the turtle enough time to clear the stone to go to it's post
+            sleep(6) --Give the turtle enough time to clear the stone to go to it's post
         end
     end
 end
