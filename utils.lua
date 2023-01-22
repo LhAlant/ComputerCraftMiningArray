@@ -247,7 +247,7 @@ end
 function calculateRelativePosFromId(id)
     id = id - 1
 
-    local goalPos = {x = 0, y = 0, z = 0}
+    local goalPos = vector3D({0, 0, 0})
 
     goalPos.x = 0
     goalPos.y = math.floor(id / 16) * 3
