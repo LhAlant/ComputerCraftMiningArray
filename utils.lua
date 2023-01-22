@@ -24,7 +24,7 @@ local vector3D_mt = {
 }
 
 function vector3D(table)
-    table = {x = table[1], y = table[2]}
+    table = {x = table[1], y = table[2], z = table[3]}
     return setmetatable(table, vector3D_mt)
 end
 
