@@ -1,5 +1,0 @@
-1. Un compteur ´etourdi
-Un compteur d´emarrant `a 0 est utilis´e pour afficher le nombre de personnes ayant franchi l’unique tourniquet `a l’entr´ee d’un festival. Malheureusement, il est d´efectueux et saute toujours les chiffres 2, 5 et 7, passant
-directement au chiffre suivant, et ce peu importe la position du chiffre dans
-le nombre. Si, `a la fin du festival, il indique 3608, combien de personnes
-ont r´eellement franchi le tourniquet pendant ce festival ?

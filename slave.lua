@@ -118,27 +118,17 @@ function disassembleArray()
     dumpInventoryIntoReturnEnderchest(1)
     print("turtle is rotating")
     rotation = rotateTo(rotation, 3)
-    if relativeXId ~= 0 then
-        print("I'll mine what's in front of me")
-        safeMove(relativeXId - 1) --All the turtles will mine each others
-        return
-    end
 
-    rotation = rotateTo(rotation, 1)
-    --Mine all the turtles on it's row
-    while turtle.getItemCount(16) ~= 0 do
-        turtle.dig()
-    end 
+    print("I'll mine what's in front of me")
+    safeMove(relativeXId) --All the turtles will mine each others, there will be one remaining on each row
     dumpInventoryIntoReturnEnderchest(1) --Returns all turtles in the storage
 
-    if relativeYId ~= 0 then
-        safeMoveDown((realtiveYid - 1) * 3 + 2)
-        return
-    end
+    safeMoveDown((relativeYid) * 3)
 
-    while true do
-        turtle.digUp()
-    end
+    safeMoveUp(1)
+    dumpInventoryIntoReturnEnderchest(1)
+
+    error("All turtles have been returned !")
 end
 
 while true do
