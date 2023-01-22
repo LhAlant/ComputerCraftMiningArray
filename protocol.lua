@@ -84,7 +84,12 @@ end
 function requestCoordinatesFromSlave(modem, id)
     modem.transmit(MOSI_CHANNEL, MOSI_CHANNEL, ""..MOSI_PREFIX..MOSI_REQUEST_COORDS.." "..id)
 
+    print("coordinate requesting message transmited")
+
     local expectedMessage = ""..MISO_PREFIX..MISO_RETURN_COORDS
+
+    print("waiting for message event")
+
     local e, side, recv, rply, message, distance = os.pullEvent("modem_message")
     if string.sub(message, 1, #expectedMessage) ~= expectedMessage then
         error("Got '"..message.."' expected '"..expectedMessage.."', shutting down")

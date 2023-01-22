@@ -124,7 +124,7 @@ function disassembleArray()
         return
     end
 
-    rotateTo(1)
+    rotateTo(rotation, 1)
     --Mine all the turtles on it's row
     while turtle.getItemCount(16) ~= 0 do
         turtle.dig()
