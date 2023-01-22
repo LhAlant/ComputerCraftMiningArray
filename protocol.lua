@@ -94,7 +94,7 @@ function requestCoordinatesFromSlave(modem, id)
 end
 
 function tellCoordinatesToMaster(modem, currentPos)
-    modem.transmit(MOSI_CHANNEL, MOSI_CHANNEL, ""..MISO_PREFIX..MOSI_RETURN_COORDS.." "..tostring(currentPos))
+    modem.transmit(MOSI_CHANNEL, MOSI_CHANNEL, ""..MISO_PREFIX..MISO_RETURN_COORDS.." "..tostring(currentPos))
 end
 
 --Master tells the slave to go to a specific coordinate relative to where they started

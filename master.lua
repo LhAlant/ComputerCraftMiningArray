@@ -38,18 +38,19 @@ function placeTurtles()
     for i = 1, 56, 1 do
         turtle.suckDown(1)
         turtle.place()
-        sleep(0.3)
+        sleep(0.5)
         local slave = peripheral.wrap("front")
         slave.turnOn()
-        sleep(0.3) --Let the turtle startup
+        sleep(0.5) --Let the turtle startup
         giveSlaveId(modem, i)
         makeSlaveDoSetup(modem, i)
 
         listenSlaveSetupDone(i) --waits for the turtle to be done picking up items
         if i % 16 == 1 then
-            sleep(6) --Give the turtle enough time to clear the stone to go to it's post
+            sleep(7) --Give the turtle enough time to clear the stone to go to it's post
         end
     end
+    sleep(15) --Let enough time for the turtles to be in position
 end
 
 function startMining()
