@@ -159,7 +159,7 @@ while true do
     elseif command == MOSI_GOTO_Z then
         rotation = moveTo(currentPos, {x = currentPos.x, y = currentPos.y, z = tonumber(data[2])}, rotation)
         currentPos.z = tonumber(data[2])
-    elseif command == MISO_REQUEST_COORDS and tonumber(data[2]) == id then
+    elseif command == MOSI_REQUEST_COORDS and tonumber(data[2]) == id then
         tellCoordinatesToMaster(modem, currentPos)
     elseif command == MOSI_DISASSEMBLE_ARRAY then
         disassembleArray()

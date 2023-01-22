@@ -94,6 +94,7 @@ function requestCoordinatesFromSlave(modem, id)
 end
 
 function tellCoordinatesToMaster(modem, currentPos)
+    print("tostring(currentPos) : "..tostring(currentPos).." currentPos : "..currentPos)
     modem.transmit(MOSI_CHANNEL, MOSI_CHANNEL, ""..MISO_PREFIX..MISO_RETURN_COORDS.." "..tostring(currentPos))
 end
 
