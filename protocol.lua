@@ -1,4 +1,4 @@
----@diagnostic disable: undefined-field, lowercase-global
+
 constants = require("constants")
 
 --Gives the slaves an id

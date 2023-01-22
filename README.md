@@ -11,12 +11,12 @@ Make sure all of the turtles have atleast a wireless modem and that the slaves h
 The pocket computer will need an endem modem as it,s equipped peripheral
 
 open the turtle you want as the master and copy into the shell :
-wget run https://github.com/LhAlant/ComputerCraftMiningArray/blob/main/mastersetup.lua
+wget run https://raw.githubusercontent.com/LhAlant/ComputerCraftMiningArray/main/mastersetup.lua
 
 open the turtles you want as the slaves and copy into the shell :
-wget run https://github.com/LhAlant/ComputerCraftMiningArray/blob/main/slavesetup.lua
+wget run https://raw.githubusercontent.com/LhAlant/ComputerCraftMiningArray/main/slavesetup.lua
 
 open the pocket computer you want to use as the remote to stop the turtles and copy into the shell :
-wget run https://github.com/LhAlant/ComputerCraftMiningArray/blob/main/remotesetup.lua
+wget run https://raw.githubusercontent.com/LhAlant/ComputerCraftMiningArray/main/remotesetup.lua
 
 
