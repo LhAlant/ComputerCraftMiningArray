@@ -17,5 +17,5 @@ if response == "y" or response == "Y" then
     print("Slaves are heawding to a specific X: "..slaveCoordinates.x)
     print("Giving them 20 seconds before the mining array disassembling sequence")
     sleep(20)
-    startDisassemblingSequence()
+    startDisassemblingSequence(modem)
 end

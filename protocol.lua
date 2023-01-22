@@ -114,6 +114,6 @@ function tellSlaveToGotoZ(modem, z)
     modem.transmit(MOSI_CHANNEL, MOSI_CHANNEL, ""..MOSI_PREFIX..MOSI_GOTO_Z.." "..z)
 end
 
-function startDisassemblingSequence()
+function startDisassemblingSequence(modem)
     modem.transmit(MOSI_CHANNEL, MOSI_CHANNEL, ""..MOSI_PREFIX..MOSI_DISASSEMBLE_ARRAY)
 end
