@@ -5,6 +5,8 @@ local protocol = require("protocol")
 local constants = require("constants")
 
 local modem = peripheral.wrap("back") --Not a turtle, the utils command will not work since it's looking for a modem on the left
+modem.open(MISO_CHANNEL)
+
 print("Stop mining ? Y/N")
 local response = io.read()
 
