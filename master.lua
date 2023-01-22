@@ -31,7 +31,7 @@ function placeEnderchests()
     end
 
     --Retourne au dessus du premier enderchest
-    unsafeMoveBack(enderchest_containing_return_enderchests_slot - enderchest_containing_fuel_turtles_slot)
+    unsafeMoveBack(enderchest_containing_return_enderchests_slot - enderchest_containing_turtles_slot)
 end
 
 function placeTurtles()
